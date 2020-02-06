@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9EE2895A-B5FD-4A31-B680-632619DF14E4}</ProjectGuid>
+    <ProjectGuid>{F9532B92-92EB-4D91-A882-43E5D3FBD1B5}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{122416d6-6b49-4ee2-a1e8-b825f31c79fe}</TemplateGuid>
     <OutputType>Library</OutputType>
@@ -13,7 +13,6 @@
     <RootNamespace>Almacen.UIClassic.Android</RootNamespace>
     <AssemblyName>Almacen.UIClassic.Android</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <Deterministic>True</Deterministic>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
