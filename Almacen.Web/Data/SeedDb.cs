@@ -24,36 +24,36 @@
         {
             await this.context.Database.EnsureCreatedAsync();
 
-            var user = await this.userHelper.GetUserByEmailAsync("jzuluaga55@gmail.com");
-            if (user == null)
-            {
-                user = new User
-                {
-                    FirstName = "Reinaldo",
-                    LastName = "Barco",
-                    Email = "reyblop@gmail.com",
-                    UserName = "reyblop@gmail.com",
-                    PhoneNumber = "3007754871"
-                };
+            //var user = await this.userHelper.GetUserByEmailAsync("jzuluaga55@gmail.com");
+            //if (user == null)
+            //{
+            //    user = new User
+            //    {
+            //        FirstName = "Reinaldo",
+            //        LastName = "Barco",
+            //        Email = "reyblop@gmail.com",
+            //        UserName = "reyblop@gmail.com",
+            //        PhoneNumber = "3007754871"
+            //    };
 
-                var result = await this.userHelper.AddUserAsync(user, "123456");
-                if (result != IdentityResult.Success)
-                {
-                    throw new InvalidOperationException("Could not create the user in seeder");
-                }
-            }
+            //    var result = await this.userHelper.AddUserAsync(user, "123456");
+            //    if (result != IdentityResult.Success)
+            //    {
+            //        throw new InvalidOperationException("Could not create the user in seeder");
+            //    }
+            //}
 
 
             if (!this.context.Products.Any())
             {
-                this.AddProduct("Huawei P10", user);
-                this.AddProduct("LG Z8", user);
-                this.AddProduct("Air Dots", user);
+                this.AddProduct("Huawei P10");
+                this.AddProduct("LG Z8");
+                this.AddProduct("Air Dots");
                 await this.context.SaveChangesAsync();
             }
         }
 
-        private void AddProduct(string name, User user)
+        private void AddProduct(string name)
         {
             this.context.Products.Add(new Product
             {
@@ -61,7 +61,7 @@
                 Price = this.random.Next(1000),
                 IsAvailabe = true,
                 Stock = this.random.Next(100),
-                User = user
+                //User = user
             });
         }
     }
