@@ -30,8 +30,16 @@
 
 		[DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
 		public double Stock { get; set; }
-
 		public User User { get; set; }
+
+		public string ImgageFullPath 
+		{ 
+			get 
+			{
+				if (string.IsNullOrEmpty(this.ImageUrl))	return null;
+				return $"https://localhost:44320/{this.ImageUrl.Substring(1)}";
+			}
+		}
 	}
 
 }
