@@ -37,7 +37,7 @@
 			get 
 			{
 				if (string.IsNullOrEmpty(this.ImageUrl))	return null;
-				return $"https://localhost:44320/{this.ImageUrl.Substring(1)}";
+				return $"https://almacen.azurewebsites.net{this.ImageUrl.Substring(1)}";
 			}
 		}
 	}
